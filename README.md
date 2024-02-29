@@ -1,7 +1,8 @@
 # sokoban
 Implementacion de sokoban
 
-#Simbolos
+# Simbolos
+
 0. Personaje
 1. Caja
 2. Meta
