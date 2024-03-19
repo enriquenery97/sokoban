@@ -52,7 +52,7 @@ Para moverse en el juego el usuario utilizará alguna de las siguientes letras p
 | --- | --- | --- | --- |
 | 0. | Cargar el siguiente nivel. | Por hacer | - | | - |
 | 1. | Repetir el juego hasta terminar el nivel. | Por hacer | - | | - |
-| 2. | Imprimir mapa.| Por hacer | - |
+| 2. | Imprimir mapa.| Hecho | - |
 | 3. | Leer el movimiento. | Por hacer | - |
 | 4. | Evaluar el movimiento del usuario. | Por hacer | - |
 
@@ -60,9 +60,9 @@ Para moverse en el juego el usuario utilizará alguna de las siguientes letras p
 
 | No. | Función | Kanban | Inicio | Fin | Fecha terminación |
 | --- | --- | --- | --- | --- | --- |
-| 5. | Personaje, pasillo  | Por hacer | [0,4] | [4,0] | - |
+| 5. | Personaje, pasillo  | Hecho | [0,4] | [4,0] | - |
 | 6. | Personaje, meta  | Por hacer | [0,2] | [4,6] |- |
-| 7. | Personaje, caja, pasillo | Por hacer | [0,1,4] | [4,0,1] | - |
+| 7. | Personaje, caja, pasillo | Hecho | [0,1,4] | [4,0,1] | - |
 | 8. | Personaje, caja,  meta | Por hacer | [0,1,2] | [4,0,5] | - |
 | 9. | Personaje, caja_meta, pasillo | Por hacer | [] | [] | - |
 | 10. |Personaje, caja_meta, meta | Por hacer | [] | [] | - |
