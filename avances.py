@@ -1,3 +1,4 @@
+import os
 class Soko:
     #0 = Personaje
     #1 = Caja 
@@ -30,6 +31,8 @@ class Soko:
         self.personaje_fila = 3
 
     def imprimirMapa(self):
+        #Limpiar pantalla
+        os.system('cls' if os.name == 'nt' else 'clear')
         for filas in self.mapa:
             print(filas)
 
