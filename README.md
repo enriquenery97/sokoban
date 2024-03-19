@@ -51,10 +51,10 @@ Para moverse en el juego el usuario utilizará alguna de las siguientes letras p
 | No. |Función | Kanban | Fecha terminación |
 | --- | --- | --- | --- |
 | 0. | Cargar el siguiente nivel. | Por hacer | - | | - |
-| 1. | Repetir el juego hasta terminar el nivel. | Por hacer | - | | - |
+| 1. | Repetir el juego hasta terminar el nivel. | Hecho | - | | - |
 | 2. | Imprimir mapa.| Hecho | - |
-| 3. | Leer el movimiento. | Por hacer | - |
-| 4. | Evaluar el movimiento del usuario. | Por hacer | - |
+| 3. | Leer el movimiento. | Hecho | - |
+| 4. | Evaluar el movimiento del usuario. | Hecho | - |
 
 ## Derecha
 
@@ -64,10 +64,10 @@ Para moverse en el juego el usuario utilizará alguna de las siguientes letras p
 | 6. | Personaje, meta  | Por hacer | [0,2] | [4,6] |- |
 | 7. | Personaje, caja, pasillo | Hecho | [0,1,4] | [4,0,1] | - |
 | 8. | Personaje, caja,  meta | Por hacer | [0,1,2] | [4,0,5] | - |
-| 9. | Personaje, caja_meta, pasillo | Por hacer | [] | [] | - |
-| 10. |Personaje, caja_meta, meta | Por hacer | [] | [] | - |
-| 11. | Personaje_meta, pasillo | Por hacer | [] | [] | - |
-| 12. | Personaje_meta, meta | Por hacer | [] | [] | - |
+| 9. | Personaje, caja_meta, pasillo | Por hacer | [0,6,4] | [] | - |
+| 10. |Personaje, caja_meta, meta | Por hacer | [0,6,2] | [] | - |
+| 11. | Personaje_meta, pasillo | Por hacer | [5,2,4] | [] | - |
+| 12. | Personaje_meta, meta | Por hacer | [5,2] | [] | - |
 | 13. | Personaje_meta, caja, pasillo | Por hacer | [] | [] | - |
 | 14. | Personaje_meta, caja, meta | Por hacer | [] | [] | - |
 | 15. | Personaje_meta, caja_meta, pasillo | Por hacer | [] | [] | - |
