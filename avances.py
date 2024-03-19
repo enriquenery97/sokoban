@@ -53,15 +53,6 @@ class Soko:
                     self.personaje_fila = nueva_fila
                     self.personaje_columna = nueva_columna
 
-#Este método toma tres argumentos: self, nueva_fila y nueva_columna. Aquí está una explicación de lo que hace el método:
-#Verifica si la nueva posición (representada por nueva_fila y nueva_columna) está dentro de los límites del mapa. Esto se hace comparando las coordenadas con el tamaño del mapa
-#(el número de filas y columnas en el mapa).
-#Si la nueva posición es un espacio vacío (4) o una meta (2), entonces mueve al personaje a esa posición. Actualiza el mapa y las coordenadas del personaje.
-#Si la nueva posición es una caja (1), entonces se verifica si la siguiente casilla en la misma dirección (representada por siguiente_fila y siguiente_columna) está vacía (4) o es una meta (2).
-#Si es así, entonces mueve tanto al personaje como a la caja a estas nuevas posiciones. Actualiza el mapa y las coordenadas del personaje.
-#Este método es esencial para la lógica de movimiento del jugador y de las cajas en el juego Sokoban. Permite verificar la validez de un movimiento y realizar el movimiento correspondiente, ya sea 
-#moviendo al personaje solo o moviendo tanto al personaje como a una caja.#
-
     def derecha(self):
         self.movimiento(self.personaje_fila, self.personaje_columna + 1)
 
@@ -95,3 +86,11 @@ class Soko:
 
 soko = Soko()
 soko.jugar()
+#Este método toma tres argumentos: self, nueva_fila y nueva_columna. Aquí está una explicación de lo que hace el método:
+#Verifica si la nueva posición (representada por nueva_fila y nueva_columna) está dentro de los límites del mapa. Esto se hace comparando las coordenadas con el tamaño del mapa
+#(el número de filas y columnas en el mapa).
+#Si la nueva posición es un espacio vacío (4) o una meta (2), entonces mueve al personaje a esa posición. Actualiza el mapa y las coordenadas del personaje.
+#Si la nueva posición es una caja (1), entonces se verifica si la siguiente casilla en la misma dirección (representada por siguiente_fila y siguiente_columna) está vacía (4) o es una meta (2).
+#Si es así, entonces mueve tanto al personaje como a la caja a estas nuevas posiciones. Actualiza el mapa y las coordenadas del personaje.
+#Este método es esencial para la lógica de movimiento del jugador y de las cajas en el juego Sokoban. Permite verificar la validez de un movimiento y realizar el movimiento correspondiente, ya sea 
+#moviendo al personaje solo o moviendo tanto al personaje como a una caja.#
