@@ -1,12 +1,13 @@
 import os
+
 class Soko:
-    #0 = Personaje
-    #1 = Caja 
-    #2 = Meta
-    #3 = Pared 
-    #4 = Espacio 
-    #5 = Caja_Meta 
-    #6 =Personaje_meta
+    # 0 = Personaje
+    # 1 = Caja 
+    # 2 = Meta
+    # 3 = Pared 
+    # 4 = Espacio 
+    # 5 = Caja_Meta 
+    # 6 = Personaje_meta
 
     mapa = [] # mapa del juego
     # Identifica al personaje
@@ -20,7 +21,7 @@ class Soko:
             [3, 3, 3, 3, 3, 3, 3, 3, 3],
             [3, 4, 4, 4, 4, 4, 4, 4, 3],
             [3, 4, 4, 4, 4, 4, 4, 4, 3],
-            [3, 4, 4, 4, 0, 1, 4, 4, 3],
+            [3, 4, 4, 4, 0, 1, 3, 4, 3],
             [3, 4, 4, 4, 4, 4, 4, 4, 3],
             [3, 4, 4, 4, 4, 4, 4, 2, 3],
             [3, 3, 3, 3, 3, 3, 3, 3, 3]
@@ -42,9 +43,12 @@ class Soko:
             # Si la nueva posición es un espacio o una meta, mueve al personaje
             if self.mapa[nueva_fila][nueva_columna] in [4, 2]:
                 self.mapa[self.personaje_fila][self.personaje_columna] = 4
-                self.mapa[nueva_fila][nueva_columna] = 0
                 self.personaje_fila = nueva_fila
                 self.personaje_columna = nueva_columna
+                if self.mapa[nueva_fila][nueva_columna] == 2:  # Si la nueva posición es Meta, convierte al personaje en Personaje_Meta
+                    self.mapa[nueva_fila][nueva_columna] = 5
+                else:
+                    self.mapa[nueva_fila][nueva_columna] = 0
             # Si la nueva posición es una caja y la siguiente casilla es un espacio o una meta, mueve la caja y al personaje
             elif self.mapa[nueva_fila][nueva_columna] == 1:
                 siguiente_fila = nueva_fila + (nueva_fila - self.personaje_fila)
@@ -52,7 +56,10 @@ class Soko:
                 if 0 <= siguiente_fila < len(self.mapa) and 0 <= siguiente_columna < len(self.mapa[0]) and self.mapa[siguiente_fila][siguiente_columna] in [4, 2]:
                     self.mapa[self.personaje_fila][self.personaje_columna] = 4
                     self.mapa[nueva_fila][nueva_columna] = 0
-                    self.mapa[siguiente_fila][siguiente_columna] = 1
+                    if self.mapa[siguiente_fila][siguiente_columna] == 2:  # Si la siguiente posición de la caja es Meta, convierte al personaje en Personaje_Meta
+                        self.mapa[siguiente_fila][siguiente_columna] = 6
+                    else:
+                        self.mapa[siguiente_fila][siguiente_columna] = 1
                     self.personaje_fila = nueva_fila
                     self.personaje_columna = nueva_columna
 
@@ -89,11 +96,3 @@ class Soko:
 
 soko = Soko()
 soko.jugar()
-#Este método toma tres argumentos: self, nueva_fila y nueva_columna. Aquí está una explicación de lo que hace el método:
-#Verifica si la nueva posición (representada por nueva_fila y nueva_columna) está dentro de los límites del mapa. Esto se hace comparando las coordenadas con el tamaño del mapa
-#(el número de filas y columnas en el mapa).
-#Si la nueva posición es un espacio vacío (4) o una meta (2), entonces mueve al personaje a esa posición. Actualiza el mapa y las coordenadas del personaje.
-#Si la nueva posición es una caja (1), entonces se verifica si la siguiente casilla en la misma dirección (representada por siguiente_fila y siguiente_columna) está vacía (4) o es una meta (2).
-#Si es así, entonces mueve tanto al personaje como a la caja a estas nuevas posiciones. Actualiza el mapa y las coordenadas del personaje.
-#Este método es esencial para la lógica de movimiento del jugador y de las cajas en el juego Sokoban. Permite verificar la validez de un movimiento y realizar el movimiento correspondiente, ya sea 
-#moviendo al personaje solo o moviendo tanto al personaje como a una caja.#
